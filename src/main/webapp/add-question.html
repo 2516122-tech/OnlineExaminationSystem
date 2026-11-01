@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Questions</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f3efff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            width: 450px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #663399;
+        }
+
+        input, textarea, select {
+            width: 90%;
+            padding: 12px;
+            margin: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #663399;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Add New Question</h2>
+
+    <form action="AddQuestionServlet" method="post">
+
+        <textarea name="question_text"
+                  placeholder="Enter Question"
+                  required></textarea>
+
+        <input type="text" name="option_a"
+               placeholder="Option A" required>
+
+        <input type="text" name="option_b"
+               placeholder="Option B" required>
+
+        <input type="text" name="option_c"
+               placeholder="Option C" required>
+
+        <input type="text" name="option_d"
+               placeholder="Option D" required>
+
+        <select name="correct_option" required>
+            <option value="">Select Correct Answer</option>
+            <option value="A">Option A</option>
+            <option value="B">Option B</option>
+            <option value="C">Option C</option>
+            <option value="D">Option D</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Add Question</button>
+
+    </form>
+
+    <br>
+
+    <button onclick="location.href='admin-dashboard.jsp'">
+        Back to Dashboard
+    </button>
+
+</div>
+
+</body>
+</html>
